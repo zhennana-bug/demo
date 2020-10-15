@@ -1,0 +1,27 @@
+package com.example.controller;
+
+import com.example.entity.User;
+import com.example.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/find")
+public class UserController {
+
+    @Autowired
+    private UserService userService;
+
+    @RequestMapping("/findById/{id}")
+    public String findById( @PathVariable("id") int id){
+        String result = "";
+        try {
+            result = userService.findById(id).toString();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return result;
+    }
+}
