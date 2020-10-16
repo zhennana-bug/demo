@@ -68,7 +68,7 @@ public class Demo1 {
     }
 
     public static void writeObject(XStream xStream , String path) throws IOException {
-        Student student = new Student("张三",20);
+        Student student = new Student("张三ssssssss",20);
         Student student1 = new Student("李四",21);
         Student student2 = new Student("王五",22);
         ObjectOutputStream objectOutputStream = xStream.createObjectOutputStream(new FileOutputStream(path));
