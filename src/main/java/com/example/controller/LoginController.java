@@ -25,7 +25,11 @@ public class LoginController {
 
     @ResponseBody
     @RequestMapping("/loginUser")
+
     public String login(User user, HttpServletRequest request){
+        System.out.println("开始登陆。。。。。");
+        System.out.println("开始登陆。。。。。");
+        System.out.println("开始登陆。。。。。");
         System.out.println("开始登陆。。。。。");
         User login = userService.login(user);
         if (null == login){
